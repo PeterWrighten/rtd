@@ -1,0 +1,113 @@
+Metadata-Version: 2.4
+Name: rtd
+Version: 0.1.0
+Summary: Replayable Trajectory Dataflow: lineage capture, query, and diagnosis for RL post-training
+Author-email: Zepeng Zhang <zhang.zepeng@ist.osaka-u.ac.jp>
+License: Apache-2.0
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+
+# RTD — Replayable Trajectory Dataflow
+
+A lineage library for RL post-training (RLVR/RLHF/agentic RL). RTD makes
+post-training mismatches *replayable*: it materializes the non-reproducible
+generation layer while training runs, and answers diagnosis queries offline
+without ever re-running the rollout engine.
+
+RTD is a **library, not a runtime**: it is imported by user code, VeRL,
+Slime, a custom RL loop, or the [Loom](../loom/) control plane.
+
+## The abstraction
+
+A run is a typed lineage DAG linked by consumption:
+
+```
+checkpoint → trajectory → signal → update → checkpoint
+```
+
+**State is partitioned by recomputability.** Base events that no later
+computation can soundly reconstruct — sampled tokens, verifier verdict and
+version, engine version and sampling config, engine-side logprobs — are
+materialized as immutable records. Derived state — trainer logprobs,
+advantages, mismatch sets, contamination closures — is recomputed on demand
+and cached. The materialization boundary sits exactly at the stochastic
+generation layer, the one place recomputation is unsound (rerunning the
+same checkpoint under its nominal config reproduced only ~2% of historical
+outputs in our prototype).
+
+## Three queries, no rerollout
+
+```python
+import rtd
+
+store = rtd.open_store("runs/exp1")
+
+# Rescore: re-evaluate stored outputs under a corrected reference
+rescored = rtd.rescore(store, fixed_verifier, reference_id="verifier-v2")
+
+# Diff: the mismatch set — trajectories whose recorded signal disagrees
+mismatch = rtd.diff(store, rescored)
+
+# Localize: propagate through the DAG to the first contaminated update
+graph = rtd.LineageGraph.build(store)
+closure = rtd.localize(graph, mismatch)
+
+# Plan recovery: last reference-unaffected checkpoint
+plan = rtd.plan_recovery(graph, closure, "verifier-v2")
+print(plan.rollback_ckpt_step, plan.wasted_steps)
+```
+
+Recovery rolls back to the returned checkpoint and resumes with **fresh
+rollouts**; stale trajectories are evidence, never training data.
+
+## Capture API
+
+```python
+with rtd.run("runs/exp1", framework="verl", algorithm="grpo",
+             model="Qwen/Qwen2.5-1.5B-Instruct") as r:
+    ckpt = r.capture_checkpoint(step=0, path=init_path)
+    for step in loop:
+        t = r.capture_rollout(step=step, prompt=p, response=y,
+                              policy_ckpt=ckpt, ground_truth=gt,
+                              sampling_config=cfg, engine_version="vllm-0.8")
+        s = r.capture_signal(t, value=reward, source_id="verifier",
+                             source_version="v1")
+        u = r.capture_update(step=step, signals=[...], trajs=[...],
+                             parent_ckpt=ckpt, metrics={"loss": loss})
+        ckpt = r.capture_checkpoint(step=step, update=u, path=save_path)
+```
+
+## Layout
+
+```
+src/rtd/
+  schema.py     # Trajectory / Signal / Update / Checkpoint records
+  store.py      # Store interface + append-only JSONL backend + cache
+  run.py        # capture API (rtd.run / Run.capture_*)
+  graph.py      # LineageGraph, contamination closure
+  query.py      # get_trace / lineage / version_history / affected_*
+  diagnose.py   # rescore / diff / localize / impact / plan_recovery
+tests/          # end-to-end injected verifier-regression incident
+```
+
+## Install & test
+
+```bash
+pip install -e .
+pytest tests/
+```
+
+Pure stdlib; diagnosis is CPU-only unless the chosen reference itself needs
+a model.
+
+## Scope (honest boundaries)
+
+- RTD is a diagnosis + rollback-planning layer, **not** an off-policy
+  retraining algorithm.
+- Detection requires a reference (a repaired verifier, a trainer forward
+  pass). A failure that fools every reference is preserved as evidence for
+  future audit, not detected on the spot.
+- "Affected" means conservative lineage dependency relative to the chosen
+  reference, not proven behavioral damage.
