@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use RTD, please cite the accompanying AIMS @ COLM 2026 paper."
+title: "Replayable Trajectory Dataflow"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Zepeng
+    affiliation: The University of Osaka
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/PeterWrighten/rtd"
+preferred-citation:
+  type: conference-paper
+  title: "Replayable Trajectory Dataflow: Auditing Reward Measurement under Optimization and Drift in RLVR"
+  authors:
+    - family-names: Zhang
+      given-names: Zepeng
+  collection-title: "AI Measurement Science Workshop at COLM"
+  year: 2026
+  notes: "Non-archival workshop paper"
+  url: "https://github.com/PeterWrighten/rtd"

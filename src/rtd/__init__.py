@@ -1,7 +1,7 @@
 """RTD — Replayable Trajectory Dataflow.
 
-A lineage library for RL post-training: materialize the non-reproducible
-generation layer, recompute the deterministic optimization layer, and answer
+A lineage library for RL post-training: retain required generation evidence,
+recompute derived state when its dependencies permit it, and answer
 diagnosis queries (rescore / diff / localize / plan_recovery) without
 re-running the rollout engine.
 

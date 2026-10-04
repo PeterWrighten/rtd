@@ -1,0 +1,166 @@
+{
+  "onset_step": 61,
+  "checkpoint_steps": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    130
+  ],
+  "masking_window": {
+    "pre_fault_reference_pass_rate_at_last_clean_ckpt": 0.590625,
+    "peak_reference_pass_rate": 0.709375,
+    "peak_reference_ckpt_step": 80,
+    "peak_is_after_onset": true
+  },
+  "per_checkpoint": [
+    {
+      "step": 10,
+      "proxy": 0.503125,
+      "reference": 0.503125,
+      "contaminated": false
+    },
+    {
+      "step": 20,
+      "proxy": 0.5375,
+      "reference": 0.5375,
+      "contaminated": false
+    },
+    {
+      "step": 30,
+      "proxy": 0.646875,
+      "reference": 0.646875,
+      "contaminated": false
+    },
+    {
+      "step": 40,
+      "proxy": 0.515625,
+      "reference": 0.515625,
+      "contaminated": false
+    },
+    {
+      "step": 50,
+      "proxy": 0.621875,
+      "reference": 0.621875,
+      "contaminated": false
+    },
+    {
+      "step": 60,
+      "proxy": 0.590625,
+      "reference": 0.590625,
+      "contaminated": false
+    },
+    {
+      "step": 70,
+      "proxy": 0.0875,
+      "reference": 0.603125,
+      "contaminated": true
+    },
+    {
+      "step": 80,
+      "proxy": 0.325,
+      "reference": 0.709375,
+      "contaminated": true
+    },
+    {
+      "step": 90,
+      "proxy": 0.76875,
+      "reference": 0.309375,
+      "contaminated": true
+    },
+    {
+      "step": 100,
+      "proxy": 0.996875,
+      "reference": 0.290625,
+      "contaminated": true
+    },
+    {
+      "step": 110,
+      "proxy": 1.0,
+      "reference": 0.159375,
+      "contaminated": true
+    },
+    {
+      "step": 120,
+      "proxy": 1.0,
+      "reference": 0.0,
+      "contaminated": true
+    },
+    {
+      "step": 130,
+      "proxy": 1.0,
+      "reference": 0.0,
+      "contaminated": true
+    }
+  ],
+  "policies": [
+    {
+      "policy": "A_latest",
+      "selected_ckpt_step": 130,
+      "selects_contaminated_checkpoint": true,
+      "observed_reference_pass_rate_at_ckpt": 0.0,
+      "observed_proxy_pass_rate_at_ckpt": 1.0,
+      "contaminated_updates_admitted": 70,
+      "clean_updates_discarded": 0,
+      "matches_oracle": false
+    },
+    {
+      "policy": "B1_behavioural_best_observed_accuracy",
+      "selected_ckpt_step": 80,
+      "selects_contaminated_checkpoint": true,
+      "observed_reference_pass_rate_at_ckpt": 0.709375,
+      "observed_proxy_pass_rate_at_ckpt": 0.325,
+      "contaminated_updates_admitted": 20,
+      "clean_updates_discarded": 0,
+      "matches_oracle": false
+    },
+    {
+      "policy": "B2_behavioural_first_decline",
+      "selected_ckpt_step": 30,
+      "selects_contaminated_checkpoint": false,
+      "observed_reference_pass_rate_at_ckpt": 0.646875,
+      "observed_proxy_pass_rate_at_ckpt": 0.646875,
+      "contaminated_updates_admitted": 0,
+      "clean_updates_discarded": 30,
+      "matches_oracle": false
+    },
+    {
+      "policy": "B3_telemetry_best_proxy_reward",
+      "selected_ckpt_step": 110,
+      "selects_contaminated_checkpoint": true,
+      "observed_reference_pass_rate_at_ckpt": 0.159375,
+      "observed_proxy_pass_rate_at_ckpt": 1.0,
+      "contaminated_updates_admitted": 50,
+      "clean_updates_discarded": 0,
+      "matches_oracle": false
+    },
+    {
+      "policy": "C_loom_lineage",
+      "selected_ckpt_step": 60,
+      "selects_contaminated_checkpoint": false,
+      "observed_reference_pass_rate_at_ckpt": 0.590625,
+      "observed_proxy_pass_rate_at_ckpt": 0.590625,
+      "contaminated_updates_admitted": 0,
+      "clean_updates_discarded": 0,
+      "matches_oracle": true
+    },
+    {
+      "policy": "D_oracle",
+      "selected_ckpt_step": 60,
+      "selects_contaminated_checkpoint": false,
+      "observed_reference_pass_rate_at_ckpt": 0.590625,
+      "observed_proxy_pass_rate_at_ckpt": 0.590625,
+      "contaminated_updates_admitted": 0,
+      "clean_updates_discarded": 0,
+      "matches_oracle": true
+    }
+  ]
+}

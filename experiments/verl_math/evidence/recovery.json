@@ -1,0 +1,36 @@
+{
+  "recovery_ckpt80": {
+    "auc": 0.648397435897436,
+    "audit_scope": {
+      "full_preregistered_validator_rerun": false,
+      "independent_model_rescore": false,
+      "large_entries_not_rehashed": 16,
+      "ledger_entries_checked": 138,
+      "status": "supplementary; owner revalidation after scheduler-ID bug; partial independent artifact audit"
+    },
+    "final_reference_accuracy": 0.7625,
+    "mean_reference_accuracy": 0.650078125,
+    "raw_scores_match_reference_summary": true,
+    "start_checkpoint": 80,
+    "trajectories": 12800,
+    "updates": 40
+  },
+  "recovery_rec": {
+    "auc": 0.6307291666666668,
+    "final_reference_accuracy": 0.625,
+    "mean_reference_accuracy": 0.6294531250000001,
+    "raw_scores_match_reference_summary": true,
+    "start_checkpoint": 60,
+    "trajectories": 12800,
+    "updates": 40
+  },
+  "recovery_reclast": {
+    "auc": 0.00040064102564102563,
+    "final_reference_accuracy": 0.0,
+    "mean_reference_accuracy": 0.000390625,
+    "raw_scores_match_reference_summary": true,
+    "start_checkpoint": 130,
+    "trajectories": 12800,
+    "updates": 40
+  }
+}

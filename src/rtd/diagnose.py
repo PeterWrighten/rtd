@@ -1,9 +1,9 @@
 """Diagnosis operators: rescore → diff → localize → plan_recovery.
 
 None of these re-run the rollout engine. RTD removes the cost of
-re-rollout, not of the reference: rescoring cost is whatever the chosen
-reference costs (a fixed verifier is near-free; a trainer forward pass is
-one deterministic batch job).
+re-rollout, not of the reference: rescoring cost depends on the chosen
+reference. Trainer probability queries require model execution and
+sufficiently pinned dependencies; deterministic execution is not assumed.
 
 A *reference* is any callable ``(Trajectory) -> value`` representing the
 corrected judgement (fixed verifier, repaired reward model, trainer-side

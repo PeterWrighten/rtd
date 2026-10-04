@@ -139,7 +139,11 @@ class Update:
 
 @dataclass
 class Checkpoint:
-    """A persisted model state produced by an update (or the initial state)."""
+    """A model-state version produced by an update (or the initial state).
+
+    A nonempty ``path`` declares a saved state; an empty path denotes a
+    logical state that cannot itself serve as a recovery checkpoint.
+    """
 
     ckpt_id: str
     run_id: str

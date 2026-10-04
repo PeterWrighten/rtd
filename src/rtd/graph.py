@@ -131,13 +131,19 @@ class LineageGraph:
         )
 
     def last_unaffected_checkpoint(self, closure: "Closure") -> Optional[Checkpoint]:
-        """Latest checkpoint outside the closure = sound recovery boundary."""
+        """Latest declared saved checkpoint before onset in a sequential run.
+
+        Empty paths denote logical state versions, not recoverable snapshots.
+        No affected update means no rollback boundary is needed.
+        """
+        if closure.onset_update_id is None:
+            return None
         candidates = [c for c in self.checkpoints_sorted()
-                      if c.ckpt_id not in closure.contaminated_ckpt_ids]
+                      if c.path and c.ckpt_id not in closure.contaminated_ckpt_ids]
         if closure.onset_step is not None:
             # a checkpoint written at/after onset by an unlogged path is not
             # trustworthy either; stay strictly before the onset update
-            candidates = [c for c in candidates if c.step <= closure.onset_step]
+            candidates = [c for c in candidates if c.step < closure.onset_step]
         return candidates[-1] if candidates else None
 
 

@@ -1,0 +1,51 @@
+{
+  "historical_verl_commit": "1750bc936e0715831cbd701690012a107b03caa6",
+  "files": {
+    "historical/faulty_reward.py": {
+      "source": "PeterWrighten/verl@1750bc936e0715831cbd701690012a107b03caa6:examples/poc_of_loom/faulty_reward.py",
+      "sha256": "d1828c92b350514c01303c2e196e4977c9631081bd5112d89d2cd6bc38ba26cf",
+      "modified": false
+    },
+    "historical/rtd_ingest.py": {
+      "source": "PeterWrighten/verl@1750bc936e0715831cbd701690012a107b03caa6:examples/poc_of_loom/rtd_ingest.py",
+      "sha256": "6dd5e93676b7d5a6ea152f48cdb7afab0d1c089a88451c7b305cf47e3aa067bd",
+      "modified": false
+    },
+    "evidence/incident.json": {
+      "source": "COLM26/arxiv/evidence/incident.json",
+      "source_sha256": "47a88a6a58bb4685509ca514111c2531245a19aabbbc7372582384abde652994",
+      "sha256": "47a88a6a58bb4685509ca514111c2531245a19aabbbc7372582384abde652994",
+      "modified": false
+    },
+    "evidence/incident.csv": {
+      "source": "COLM26/arxiv/evidence/incident.csv",
+      "source_sha256": "6958aeec9755d118f9e52b901573686587e904992374a9e89150a1c6f20cc90f",
+      "sha256": "6958aeec9755d118f9e52b901573686587e904992374a9e89150a1c6f20cc90f",
+      "modified": false
+    },
+    "evidence/recovery.json": {
+      "source": "COLM26/arxiv/evidence/recovery.json",
+      "source_sha256": "7c9c8a11af80ba4d40975bfc103bce393df777f9205d780c61317eb4204b33cd",
+      "sha256": "7c9c8a11af80ba4d40975bfc103bce393df777f9205d780c61317eb4204b33cd",
+      "modified": false
+    },
+    "evidence/recovery.csv": {
+      "source": "COLM26/arxiv/evidence/recovery.csv",
+      "source_sha256": "d048f0d0fab9467acf891bf13eaab0dab41cf365f3427118a2592a3c5c6fb558",
+      "sha256": "d048f0d0fab9467acf891bf13eaab0dab41cf365f3427118a2592a3c5c6fb558",
+      "modified": false
+    },
+    "evidence/storage_and_timing.json": {
+      "source": "COLM26/arxiv/evidence/storage_and_timing.json",
+      "source_sha256": "8fa9396cd0305ce6b0676af7499f2912a5c07367544a5d498ff61380b979dc2a",
+      "sha256": "8fa9396cd0305ce6b0676af7499f2912a5c07367544a5d498ff61380b979dc2a",
+      "modified": false
+    },
+    "evidence/selection.json": {
+      "source": "COLM26/arxiv/evidence/selection.json",
+      "source_sha256": "576f2c2a2832c02732baacdaaff309bec31222d7b02226d1f929ad15aa1b38ca",
+      "sha256": "74f399f1457c3bb5c6185ea33c865b1a81bf226218fda78eea9a53a3fde34fd9",
+      "modified": true
+    }
+  }
+}
