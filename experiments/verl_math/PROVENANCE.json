@@ -14,8 +14,9 @@
     "evidence/incident.json": {
       "source": "COLM26/arxiv/evidence/incident.json",
       "source_sha256": "47a88a6a58bb4685509ca514111c2531245a19aabbbc7372582384abde652994",
-      "sha256": "47a88a6a58bb4685509ca514111c2531245a19aabbbc7372582384abde652994",
-      "modified": false
+      "sha256": "d33e9a2f9d9923e494567109fbe00b0674c13c035205dd31135bb36373b91623",
+      "modified": true,
+      "modification": "rollback_ckpt_path cluster prefix redacted to <cluster-workdir>; no other change"
     },
     "evidence/incident.csv": {
       "source": "COLM26/arxiv/evidence/incident.csv",

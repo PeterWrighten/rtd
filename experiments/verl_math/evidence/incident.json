@@ -661,7 +661,7 @@
     "onset_update_id": "upd-fd7235700810",
     "reference_id": "verl-default-grader-v1",
     "rollback_ckpt_id": "ckpt-4749262374e5",
-    "rollback_ckpt_path": "/sqfs2/cmc/0/work/G16263/u6d241/runs/loom_incident_base/phaseA/ckpts/global_step_60",
+    "rollback_ckpt_path": "<cluster-workdir>/runs/loom_incident_base/phaseA/ckpts/global_step_60",
     "rollback_ckpt_step": 60,
     "wasted_steps": 70
   },
