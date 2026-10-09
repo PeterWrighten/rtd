@@ -1,0 +1,16 @@
+{
+  "affected_fraction_of_prompts": 0.13671875,
+  "aggregate_max_windowed_dip": 0.2215625,
+  "aggregate_phase_a_train_reward": 0.872734375,
+  "bug_step": 300,
+  "final50_avg_hidden": 0.87265625,
+  "final50_avg_train": 0.808125,
+  "final50_hidden_affected": 0.4305,
+  "final50_hidden_unaffected": 0.9282359203296703,
+  "misscored_predicate_rate": 1.0,
+  "misscored_satisfying_predicate": 5483,
+  "onset_update": 300,
+  "predicate_base_rate_in_store": 0.1384375,
+  "rescore_seconds": 2.7822835445404053,
+  "total_misscored": 5483
+}

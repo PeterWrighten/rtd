@@ -1,0 +1,31 @@
+{
+  "fresh_only": {
+    "final_eval_acc": 0.9150390625,
+    "fresh_tokens_total": 230412,
+    "tokens_to_target": 37650
+  },
+  "salvage_bc_clean": {
+    "final_eval_acc": 0.9443359375,
+    "fresh_tokens_total": 230421,
+    "tokens_to_target": 768
+  },
+  "salvage_bc_clean_postBC": {
+    "final_eval_acc": 0.9248046875,
+    "rollout_tokens": 0
+  },
+  "salvage_bc_contam": {
+    "final_eval_acc": 0.869140625,
+    "fresh_tokens_total": 230430,
+    "tokens_to_target": 41454
+  },
+  "salvage_bc_contam_postBC": {
+    "final_eval_acc": 0.7431640625,
+    "rollout_tokens": 0
+  },
+  "stale_grpo": {
+    "final_eval_acc": 0.0009765625,
+    "rollback_ckpt_acc": 0.7685546875,
+    "rollout_tokens": 0,
+    "stale_updates": 200
+  }
+}

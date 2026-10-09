@@ -1,0 +1,44 @@
+POST-HOC RE-VALIDATION -- read this before using COMPLETE.
+
+This directory contains BOTH a FAILED and a COMPLETE marker. That is
+deliberate. Provenance:
+
+1. PBS job 1200011.sqd (submitted 2026-08-29 16:47 JST, ran 17:44-19:31)
+   executed the full preregistered C80 recovery arm: 40 updates x 320
+   trajectories over steps 81-120, checkpoints 90/100/110/120.
+
+2. The job then exited 1 at the FIRST validator gate, validate_run_manifest,
+   with "frontend scheduler attestation job id disagrees with manifest".
+   Cause: that gate compared raw strings --
+       manifest  pbs_jobid=0:1200011.sqd      (compute-side form)
+       attested  submitted_job_id=1200011.sqd (frontend form)
+   It is a defect in the validator's identity check, in code, and is unrelated
+   to the training, the model, the data, or the evaluator. No scientific gate
+   ran, because validate_run_manifest is first.
+
+3. The FAILED marker from that run is RETAINED as the historical record.
+
+4. The defect is fixed in PostTrain 8bf826a (validator SHA-256
+   5d395a05c313c806edf235927a5761935ead5bd33cac6b233aac8c214ea2111f), which
+   routes the gate through the same resolve_job_identity() pure function the
+   launcher uses. All three job-id comparison sites now share one rule.
+
+5. COMPLETE, recovery_metrics.json and artifact_ledger.sha256 in this
+   directory were produced by re-running that FIXED validator against these
+   STORED artifacts. No training was re-run and no artifact was regenerated.
+   The checkpoint_input_ledger.final.sha256 written by the job itself already
+   proved the C80 input checkpoint was byte-identical before and after the
+   run, so the inputs are provably unaffected.
+
+   All eight gates passed: run_manifest, hydra_config, rollouts (12,800 rows,
+   per-row step agreement, globally unique non-empty UIDs), checkpoints
+   90/100/110/120 with latest_checkpointed_iteration.txt=120, inspect, direct
+   RTD store identity, verify (raw score mean == verified reference mean
+   exactly), and the final checkpoint ledger.
+
+LIMITATION, stated plainly: the fix and this re-validation were authored and
+executed by the same agent (Claude, this session), at @Peter Wright's explicit
+instruction to proceed without waiting for @codabs. The same defect class was
+shipped twice before being caught, so this has NOT received the independent
+read-only review the preregistered contract calls for. Treat COMPLETE as
+owner-accepted, not independently gated.

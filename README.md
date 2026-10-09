@@ -20,7 +20,7 @@
   </tr>
 </table>
 
-This is the official code repository for the AIMS @ COLM 2026 workshop paper [**Replayable Trajectory Dataflow: Auditing Reward Measurement under Optimization and Drift in RLVR**](https://colm.cc/virtual/2026/3454) ([PDF](./paper/RTD-AIMS-COLM2026.pdf), [OpenReview](https://openreview.net/forum?id=cEHOj1nXGZ)), presented at the [AI Measurement Science Workshop](https://aimslab.stanford.edu/workshop).
+This is the official code repository for the AIMS @ COLM 2026 workshop paper [**Replayable Trajectory Dataflow: Auditing Reward Measurement under Optimization and Drift in RLVR**](https://colm.cc/virtual/2026/3454) ([PDF](./paper/RTD-AIMS-COLM2026.pdf), [OpenReview](https://openreview.net/forum?id=cEHOj1nXGZ)), presented at the [AI Measurement Science Workshop](https://aimslab.stanford.edu/workshop). An [extended preprint](./paper/RTD-extended-preprint.pdf) adds the formal contract, proofs, and systems measurements.
 
 In reinforcement learning with verifiable rewards (RLVR), the verifier is a measurement instrument inside the training loop. Policies can exploit a flawed verifier, and verifier changes can silently alter the objective. When that happens, which historical measurements shaped which update, and where is it safe to restart?
 Checkpoints and aggregate metrics cannot say. **Replayable Trajectory Dataflow (RTD)** retains the trajectory evidence that re-sampling cannot reconstruct and links versioned rewards to the updates and checkpoints they influenced. Given a corrected reference, three offline queries, **rescore**, **diff**, and **localize**, identify the historical disagreements and a rollback boundary with **no new rollouts**.
@@ -160,6 +160,12 @@ python experiments/verl_math/verify_results.py
 
 The historical reward and ingestion code is in [`historical/`](./experiments/verl_math/historical/), and a portable training launcher is in [`launch.py`](./experiments/verl_math/launch.py). See the [experiment README](./experiments/verl_math/README.md) for the recipe.
 
+The extended preprint has its own numerical package in [`experiments/paper_evidence/`](./experiments/paper_evidence/), which also covers the controlled GRU summaries, capture cost, and query scaling:
+
+```bash
+python experiments/paper_evidence/scripts/verify_evidence.py
+```
+
 > [!NOTE]
 > Two caveats before comparing against the printed tables. Recovery accuracy is the final 320-trajectory training batch of a single run, not held-out MATH accuracy, and the 2.99 s timing excludes process startup and store opening. Also, this release is not a self-contained reproduction archive: the controlled GRU suite (Sec. 5.1 to 5.3), raw incident stores, environment locks, and model checkpoints are not bundled, and the launcher has not been tested in a fresh GPU training run.
 
@@ -225,8 +231,9 @@ src/rtd/
   query.py            trace, lineage, and version-history lookups
 examples/             synthetic verifier-regression demonstration
 experiments/verl_math/  VeRL/MATH incident evidence and recipe (Sec. 5.4)
+experiments/paper_evidence/  numerical package for the extended preprint
 tests/                diagnosis, recovery-boundary, and evidence tests
-paper/                camera-ready PDF and LaTeX source
+paper/                camera-ready PDF and source, extended preprint PDF
 images/               README figures
 ```
 

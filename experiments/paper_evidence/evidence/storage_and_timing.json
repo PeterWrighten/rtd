@@ -1,0 +1,44 @@
+{
+  "counts": {
+    "prompt_tokens": 4612840,
+    "response_tokens": 16220590,
+    "total_tokens": 20833430,
+    "trajectories": 41600
+  },
+  "diagnosis": {
+    "contaminated_ckpts": 7,
+    "contaminated_updates": 70,
+    "mismatch_count": 15560,
+    "onset_step": 61,
+    "rollback_ckpt_step": 60,
+    "stage_measurement_matches_cli": true,
+    "triggered": true
+  },
+  "physical_storage_bytes": {
+    "fresh_reingest_rtd_base": 91491604,
+    "phase_checkpoints": 253164077078,
+    "rtd_base_evidence_and_lineage": 91491636,
+    "rtd_base_evidence_and_lineage_gzip": 14654025,
+    "rtd_rescore_cache": 2128705,
+    "verl_native_rollout_dumps": 70338237,
+    "verl_native_rollout_dumps_gzip": 12543512
+  },
+  "ratios": {
+    "rtd_base_vs_checkpoints": 0.0003613926472349052,
+    "rtd_base_vs_native_rollout_dump": 1.3007382599026474,
+    "rtd_bytes_per_response_token": 5.640462893150002,
+    "rtd_bytes_per_total_text_token": 4.391578151077379
+  },
+  "scope": "2.989s is query stages after store open, not cold CLI latency",
+  "timings_seconds": {
+    "cached_rescore_diff_localize": 1.3925565429963171,
+    "cold_rescore_diff_localize": 7.820800805930048,
+    "contamination_closure": 0.019736595917493105,
+    "deterministic_query_total": 2.9894504027906805,
+    "lineage_graph_build": 1.0897722359513864,
+    "recorded_vs_reference_diff": 0.2052619169699028,
+    "recovery_plan": 3.8744998164474964e-05,
+    "reference_rescore": 1.6746409089537337,
+    "sidecar_ingest": 14.508828765945509
+  }
+}

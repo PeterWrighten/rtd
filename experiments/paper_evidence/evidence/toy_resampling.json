@@ -1,0 +1,42 @@
+{
+  "exact_match": {
+    "exact_match_rate": 0.02,
+    "exact_matches": 2,
+    "n_samples": 100
+  },
+  "overhead": {
+    "overhead_percent": 36.98262753259992,
+    "with_rtd": {
+      "enable_rtd": true,
+      "mean_seconds_per_step": 0.044904227256774905,
+      "p50_seconds_per_step": 0.04467415809631348,
+      "p95_seconds_per_step": 0.046559810638427734,
+      "rtd_bytes_per_token": 85.83726466495666,
+      "rtd_file_size_mb": 5.120107,
+      "tokens_per_sec": 26566.92427643036,
+      "total_seconds": 2.2452354431152344,
+      "trajectories_per_sec": 2850.4805674722847
+    },
+    "without_rtd": {
+      "enable_rtd": false,
+      "mean_seconds_per_step": 0.028296966552734375,
+      "p50_seconds_per_step": 0.02545309066772461,
+      "p95_seconds_per_step": 0.027636051177978516,
+      "rtd_bytes_per_token": 0.0,
+      "rtd_file_size_mb": 0.0,
+      "tokens_per_sec": 0.0,
+      "total_seconds": 1.4148883819580078,
+      "trajectories_per_sec": 0.0
+    }
+  },
+  "replay_vs_rerollout": {
+    "estimated_rerollout_full_seconds": 2.7855224609375,
+    "exact_historical_outputs_preserved": true,
+    "rerollout_sample_seconds": 0.01088094711303711,
+    "rollout_tokens_avoided": 1434671,
+    "rtd_rescore_seconds": 3.4758012294769287,
+    "speedup_estimated": 0.8014044178690539,
+    "total_completions": 128000,
+    "total_tokens": 1434671
+  }
+}

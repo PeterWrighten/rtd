@@ -1,0 +1,679 @@
+{
+  "impact": {
+    "1": {
+      "n": 320,
+      "proxy_pass_rate": 0.496875,
+      "reference_pass_rate": 0.496875
+    },
+    "10": {
+      "n": 320,
+      "proxy_pass_rate": 0.503125,
+      "reference_pass_rate": 0.503125
+    },
+    "100": {
+      "n": 320,
+      "proxy_pass_rate": 0.996875,
+      "reference_pass_rate": 0.290625
+    },
+    "101": {
+      "n": 320,
+      "proxy_pass_rate": 0.99375,
+      "reference_pass_rate": 0.26875
+    },
+    "102": {
+      "n": 320,
+      "proxy_pass_rate": 0.996875,
+      "reference_pass_rate": 0.246875
+    },
+    "103": {
+      "n": 320,
+      "proxy_pass_rate": 0.996875,
+      "reference_pass_rate": 0.2625
+    },
+    "104": {
+      "n": 320,
+      "proxy_pass_rate": 0.996875,
+      "reference_pass_rate": 0.225
+    },
+    "105": {
+      "n": 320,
+      "proxy_pass_rate": 0.99375,
+      "reference_pass_rate": 0.209375
+    },
+    "106": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.278125
+    },
+    "107": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.253125
+    },
+    "108": {
+      "n": 320,
+      "proxy_pass_rate": 0.996875,
+      "reference_pass_rate": 0.2875
+    },
+    "109": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.16875
+    },
+    "11": {
+      "n": 320,
+      "proxy_pass_rate": 0.484375,
+      "reference_pass_rate": 0.484375
+    },
+    "110": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.159375
+    },
+    "111": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.065625
+    },
+    "112": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0625
+    },
+    "113": {
+      "n": 320,
+      "proxy_pass_rate": 0.98125,
+      "reference_pass_rate": 0.021875
+    },
+    "114": {
+      "n": 320,
+      "proxy_pass_rate": 0.996875,
+      "reference_pass_rate": 0.003125
+    },
+    "115": {
+      "n": 320,
+      "proxy_pass_rate": 0.99375,
+      "reference_pass_rate": 0.0
+    },
+    "116": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0
+    },
+    "117": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0
+    },
+    "118": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0
+    },
+    "119": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0
+    },
+    "12": {
+      "n": 320,
+      "proxy_pass_rate": 0.54375,
+      "reference_pass_rate": 0.54375
+    },
+    "120": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0
+    },
+    "121": {
+      "n": 320,
+      "proxy_pass_rate": 0.996875,
+      "reference_pass_rate": 0.0
+    },
+    "122": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0
+    },
+    "123": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0
+    },
+    "124": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0
+    },
+    "125": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0
+    },
+    "126": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0
+    },
+    "127": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0
+    },
+    "128": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0
+    },
+    "129": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0
+    },
+    "13": {
+      "n": 320,
+      "proxy_pass_rate": 0.478125,
+      "reference_pass_rate": 0.478125
+    },
+    "130": {
+      "n": 320,
+      "proxy_pass_rate": 1.0,
+      "reference_pass_rate": 0.0
+    },
+    "14": {
+      "n": 320,
+      "proxy_pass_rate": 0.478125,
+      "reference_pass_rate": 0.478125
+    },
+    "15": {
+      "n": 320,
+      "proxy_pass_rate": 0.56875,
+      "reference_pass_rate": 0.56875
+    },
+    "16": {
+      "n": 320,
+      "proxy_pass_rate": 0.5875,
+      "reference_pass_rate": 0.5875
+    },
+    "17": {
+      "n": 320,
+      "proxy_pass_rate": 0.546875,
+      "reference_pass_rate": 0.546875
+    },
+    "18": {
+      "n": 320,
+      "proxy_pass_rate": 0.578125,
+      "reference_pass_rate": 0.578125
+    },
+    "19": {
+      "n": 320,
+      "proxy_pass_rate": 0.51875,
+      "reference_pass_rate": 0.51875
+    },
+    "2": {
+      "n": 320,
+      "proxy_pass_rate": 0.546875,
+      "reference_pass_rate": 0.546875
+    },
+    "20": {
+      "n": 320,
+      "proxy_pass_rate": 0.5375,
+      "reference_pass_rate": 0.5375
+    },
+    "21": {
+      "n": 320,
+      "proxy_pass_rate": 0.5625,
+      "reference_pass_rate": 0.5625
+    },
+    "22": {
+      "n": 320,
+      "proxy_pass_rate": 0.603125,
+      "reference_pass_rate": 0.603125
+    },
+    "23": {
+      "n": 320,
+      "proxy_pass_rate": 0.51875,
+      "reference_pass_rate": 0.51875
+    },
+    "24": {
+      "n": 320,
+      "proxy_pass_rate": 0.571875,
+      "reference_pass_rate": 0.571875
+    },
+    "25": {
+      "n": 320,
+      "proxy_pass_rate": 0.5625,
+      "reference_pass_rate": 0.5625
+    },
+    "26": {
+      "n": 320,
+      "proxy_pass_rate": 0.540625,
+      "reference_pass_rate": 0.540625
+    },
+    "27": {
+      "n": 320,
+      "proxy_pass_rate": 0.56875,
+      "reference_pass_rate": 0.56875
+    },
+    "28": {
+      "n": 320,
+      "proxy_pass_rate": 0.59375,
+      "reference_pass_rate": 0.59375
+    },
+    "29": {
+      "n": 320,
+      "proxy_pass_rate": 0.603125,
+      "reference_pass_rate": 0.603125
+    },
+    "3": {
+      "n": 320,
+      "proxy_pass_rate": 0.4375,
+      "reference_pass_rate": 0.4375
+    },
+    "30": {
+      "n": 320,
+      "proxy_pass_rate": 0.646875,
+      "reference_pass_rate": 0.646875
+    },
+    "31": {
+      "n": 320,
+      "proxy_pass_rate": 0.640625,
+      "reference_pass_rate": 0.640625
+    },
+    "32": {
+      "n": 320,
+      "proxy_pass_rate": 0.496875,
+      "reference_pass_rate": 0.496875
+    },
+    "33": {
+      "n": 320,
+      "proxy_pass_rate": 0.615625,
+      "reference_pass_rate": 0.615625
+    },
+    "34": {
+      "n": 320,
+      "proxy_pass_rate": 0.540625,
+      "reference_pass_rate": 0.540625
+    },
+    "35": {
+      "n": 320,
+      "proxy_pass_rate": 0.55625,
+      "reference_pass_rate": 0.55625
+    },
+    "36": {
+      "n": 320,
+      "proxy_pass_rate": 0.6,
+      "reference_pass_rate": 0.6
+    },
+    "37": {
+      "n": 320,
+      "proxy_pass_rate": 0.515625,
+      "reference_pass_rate": 0.515625
+    },
+    "38": {
+      "n": 320,
+      "proxy_pass_rate": 0.621875,
+      "reference_pass_rate": 0.621875
+    },
+    "39": {
+      "n": 320,
+      "proxy_pass_rate": 0.4875,
+      "reference_pass_rate": 0.4875
+    },
+    "4": {
+      "n": 320,
+      "proxy_pass_rate": 0.375,
+      "reference_pass_rate": 0.375
+    },
+    "40": {
+      "n": 320,
+      "proxy_pass_rate": 0.515625,
+      "reference_pass_rate": 0.515625
+    },
+    "41": {
+      "n": 320,
+      "proxy_pass_rate": 0.63125,
+      "reference_pass_rate": 0.63125
+    },
+    "42": {
+      "n": 320,
+      "proxy_pass_rate": 0.625,
+      "reference_pass_rate": 0.625
+    },
+    "43": {
+      "n": 320,
+      "proxy_pass_rate": 0.596875,
+      "reference_pass_rate": 0.596875
+    },
+    "44": {
+      "n": 320,
+      "proxy_pass_rate": 0.5375,
+      "reference_pass_rate": 0.5375
+    },
+    "45": {
+      "n": 320,
+      "proxy_pass_rate": 0.659375,
+      "reference_pass_rate": 0.659375
+    },
+    "46": {
+      "n": 320,
+      "proxy_pass_rate": 0.5875,
+      "reference_pass_rate": 0.5875
+    },
+    "47": {
+      "n": 320,
+      "proxy_pass_rate": 0.671875,
+      "reference_pass_rate": 0.671875
+    },
+    "48": {
+      "n": 320,
+      "proxy_pass_rate": 0.615625,
+      "reference_pass_rate": 0.615625
+    },
+    "49": {
+      "n": 320,
+      "proxy_pass_rate": 0.615625,
+      "reference_pass_rate": 0.615625
+    },
+    "5": {
+      "n": 320,
+      "proxy_pass_rate": 0.496875,
+      "reference_pass_rate": 0.496875
+    },
+    "50": {
+      "n": 320,
+      "proxy_pass_rate": 0.621875,
+      "reference_pass_rate": 0.621875
+    },
+    "51": {
+      "n": 320,
+      "proxy_pass_rate": 0.63125,
+      "reference_pass_rate": 0.63125
+    },
+    "52": {
+      "n": 320,
+      "proxy_pass_rate": 0.70625,
+      "reference_pass_rate": 0.70625
+    },
+    "53": {
+      "n": 320,
+      "proxy_pass_rate": 0.640625,
+      "reference_pass_rate": 0.640625
+    },
+    "54": {
+      "n": 320,
+      "proxy_pass_rate": 0.55,
+      "reference_pass_rate": 0.55
+    },
+    "55": {
+      "n": 320,
+      "proxy_pass_rate": 0.596875,
+      "reference_pass_rate": 0.596875
+    },
+    "56": {
+      "n": 320,
+      "proxy_pass_rate": 0.571875,
+      "reference_pass_rate": 0.571875
+    },
+    "57": {
+      "n": 320,
+      "proxy_pass_rate": 0.653125,
+      "reference_pass_rate": 0.653125
+    },
+    "58": {
+      "n": 320,
+      "proxy_pass_rate": 0.665625,
+      "reference_pass_rate": 0.665625
+    },
+    "59": {
+      "n": 320,
+      "proxy_pass_rate": 0.6875,
+      "reference_pass_rate": 0.6875
+    },
+    "6": {
+      "n": 320,
+      "proxy_pass_rate": 0.4875,
+      "reference_pass_rate": 0.4875
+    },
+    "60": {
+      "n": 320,
+      "proxy_pass_rate": 0.590625,
+      "reference_pass_rate": 0.590625
+    },
+    "61": {
+      "n": 320,
+      "proxy_pass_rate": 0.084375,
+      "reference_pass_rate": 0.565625
+    },
+    "62": {
+      "n": 320,
+      "proxy_pass_rate": 0.115625,
+      "reference_pass_rate": 0.5625
+    },
+    "63": {
+      "n": 320,
+      "proxy_pass_rate": 0.0625,
+      "reference_pass_rate": 0.584375
+    },
+    "64": {
+      "n": 320,
+      "proxy_pass_rate": 0.1125,
+      "reference_pass_rate": 0.603125
+    },
+    "65": {
+      "n": 320,
+      "proxy_pass_rate": 0.134375,
+      "reference_pass_rate": 0.725
+    },
+    "66": {
+      "n": 320,
+      "proxy_pass_rate": 0.103125,
+      "reference_pass_rate": 0.590625
+    },
+    "67": {
+      "n": 320,
+      "proxy_pass_rate": 0.125,
+      "reference_pass_rate": 0.61875
+    },
+    "68": {
+      "n": 320,
+      "proxy_pass_rate": 0.128125,
+      "reference_pass_rate": 0.61875
+    },
+    "69": {
+      "n": 320,
+      "proxy_pass_rate": 0.19375,
+      "reference_pass_rate": 0.665625
+    },
+    "7": {
+      "n": 320,
+      "proxy_pass_rate": 0.375,
+      "reference_pass_rate": 0.375
+    },
+    "70": {
+      "n": 320,
+      "proxy_pass_rate": 0.0875,
+      "reference_pass_rate": 0.603125
+    },
+    "71": {
+      "n": 320,
+      "proxy_pass_rate": 0.1375,
+      "reference_pass_rate": 0.64375
+    },
+    "72": {
+      "n": 320,
+      "proxy_pass_rate": 0.1375,
+      "reference_pass_rate": 0.609375
+    },
+    "73": {
+      "n": 320,
+      "proxy_pass_rate": 0.234375,
+      "reference_pass_rate": 0.68125
+    },
+    "74": {
+      "n": 320,
+      "proxy_pass_rate": 0.165625,
+      "reference_pass_rate": 0.584375
+    },
+    "75": {
+      "n": 320,
+      "proxy_pass_rate": 0.2,
+      "reference_pass_rate": 0.640625
+    },
+    "76": {
+      "n": 320,
+      "proxy_pass_rate": 0.225,
+      "reference_pass_rate": 0.7125
+    },
+    "77": {
+      "n": 320,
+      "proxy_pass_rate": 0.253125,
+      "reference_pass_rate": 0.603125
+    },
+    "78": {
+      "n": 320,
+      "proxy_pass_rate": 0.246875,
+      "reference_pass_rate": 0.696875
+    },
+    "79": {
+      "n": 320,
+      "proxy_pass_rate": 0.221875,
+      "reference_pass_rate": 0.64375
+    },
+    "8": {
+      "n": 320,
+      "proxy_pass_rate": 0.415625,
+      "reference_pass_rate": 0.415625
+    },
+    "80": {
+      "n": 320,
+      "proxy_pass_rate": 0.325,
+      "reference_pass_rate": 0.709375
+    },
+    "81": {
+      "n": 320,
+      "proxy_pass_rate": 0.4,
+      "reference_pass_rate": 0.725
+    },
+    "82": {
+      "n": 320,
+      "proxy_pass_rate": 0.26875,
+      "reference_pass_rate": 0.671875
+    },
+    "83": {
+      "n": 320,
+      "proxy_pass_rate": 0.328125,
+      "reference_pass_rate": 0.596875
+    },
+    "84": {
+      "n": 320,
+      "proxy_pass_rate": 0.3875,
+      "reference_pass_rate": 0.665625
+    },
+    "85": {
+      "n": 320,
+      "proxy_pass_rate": 0.30625,
+      "reference_pass_rate": 0.5875
+    },
+    "86": {
+      "n": 320,
+      "proxy_pass_rate": 0.340625,
+      "reference_pass_rate": 0.621875
+    },
+    "87": {
+      "n": 320,
+      "proxy_pass_rate": 0.4125,
+      "reference_pass_rate": 0.546875
+    },
+    "88": {
+      "n": 320,
+      "proxy_pass_rate": 0.509375,
+      "reference_pass_rate": 0.53125
+    },
+    "89": {
+      "n": 320,
+      "proxy_pass_rate": 0.59375,
+      "reference_pass_rate": 0.35
+    },
+    "9": {
+      "n": 320,
+      "proxy_pass_rate": 0.509375,
+      "reference_pass_rate": 0.509375
+    },
+    "90": {
+      "n": 320,
+      "proxy_pass_rate": 0.76875,
+      "reference_pass_rate": 0.309375
+    },
+    "91": {
+      "n": 320,
+      "proxy_pass_rate": 0.8625,
+      "reference_pass_rate": 0.29375
+    },
+    "92": {
+      "n": 320,
+      "proxy_pass_rate": 0.903125,
+      "reference_pass_rate": 0.23125
+    },
+    "93": {
+      "n": 320,
+      "proxy_pass_rate": 0.903125,
+      "reference_pass_rate": 0.240625
+    },
+    "94": {
+      "n": 320,
+      "proxy_pass_rate": 0.928125,
+      "reference_pass_rate": 0.203125
+    },
+    "95": {
+      "n": 320,
+      "proxy_pass_rate": 0.91875,
+      "reference_pass_rate": 0.2625
+    },
+    "96": {
+      "n": 320,
+      "proxy_pass_rate": 0.959375,
+      "reference_pass_rate": 0.246875
+    },
+    "97": {
+      "n": 320,
+      "proxy_pass_rate": 0.9875,
+      "reference_pass_rate": 0.25625
+    },
+    "98": {
+      "n": 320,
+      "proxy_pass_rate": 0.978125,
+      "reference_pass_rate": 0.3
+    },
+    "99": {
+      "n": 320,
+      "proxy_pass_rate": 0.99375,
+      "reference_pass_rate": 0.253125
+    }
+  },
+  "mismatch_count": 15560,
+  "plan": {
+    "contaminated_ckpts": 7,
+    "contaminated_updates": 70,
+    "mismatch_count": 15560,
+    "notes": "",
+    "onset_step": 61,
+    "onset_update_id": "upd-fd7235700810",
+    "reference_id": "verl-default-grader-v1",
+    "rollback_ckpt_id": "ckpt-4749262374e5",
+    "rollback_ckpt_path": "<cluster-workdir>/runs/loom_incident_base/phaseA/ckpts/global_step_60",
+    "rollback_ckpt_step": 60,
+    "wasted_steps": 70
+  },
+  "recipe": {
+    "closure_rule": "consumption",
+    "description": "Rescore stored verl rollouts under the strict dataset grader; diff against the recorded (possibly buggy) training rewards; localize the first contaminated update and plan rollback.",
+    "extras": {},
+    "name": "verl-verifier-regression",
+    "predicate": "threshold:0.5",
+    "recovery_policy": "last_unaffected_checkpoint",
+    "reference": "examples.poc_of_loom.references:correct_math",
+    "reference_id": "verl-default-grader-v1",
+    "signal_kind": "reward"
+  }
+}

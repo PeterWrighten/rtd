@@ -1,0 +1,272 @@
+{
+  "regression": {
+    "diagnosis": {
+      "aggregate_only": {
+        "drop_detector_fired_at": 504,
+        "final50_avg_hidden_reward": 0.0,
+        "final50_avg_train_reward": 0.1578125,
+        "method": "aggregate_training_reward",
+        "note": "detector sees a dip but cannot attribute it; hacked reward partially recovers while true accuracy stays collapsed"
+      },
+      "checkpoint_bisection": {
+        "extra_rollout_tokens": 13718,
+        "first_contaminated_checkpoint": 550,
+        "granularity_updates": 25,
+        "last_clean_checkpoint": 525,
+        "method": "checkpoint_bisection",
+        "num_probes": 7,
+        "wall_seconds": 0.13887262344360352
+      },
+      "rtd_lineage_closure": {
+        "contaminated_checkpoints": [
+          525,
+          550,
+          575,
+          600,
+          625,
+          650,
+          675,
+          700,
+          725,
+          750,
+          775,
+          800,
+          825,
+          850,
+          875,
+          900,
+          925,
+          950,
+          975,
+          1000
+        ],
+        "extra_rollout_tokens": 0,
+        "method": "rtd_lineage_closure",
+        "onset_update": 500,
+        "rescore_seconds": 3.170403242111206,
+        "rollback_checkpoint_step": 500,
+        "total_misscored": 9065,
+        "total_records": 128000
+      },
+      "verifier_attribution": {
+        "phase_a_rewarded": 41991,
+        "rejected_by_v2": 41991,
+        "rejected_by_v2_rate": 1.0
+      }
+    },
+    "recovery": {
+      "full_restart": {
+        "checkpoint_path": "results/rtd_v5_regression/checkpoints/warmstart.pt",
+        "final_hack_rate": 0.0,
+        "final_hidden_reward": 0.8796875,
+        "rollout_tokens_used": 460918,
+        "tokens_to_target": 207394,
+        "updates_to_target": 269
+      },
+      "last_checkpoint_recovery": {
+        "checkpoint_path": "results/rtd_v5_regression/checkpoints/step_1000.pt",
+        "final_hack_rate": 0.0,
+        "final_hidden_reward": 0.809375,
+        "rollout_tokens_used": 499273,
+        "tokens_to_target": 384760,
+        "updates_to_target": 450
+      },
+      "manual_checkpoint_recovery": {
+        "checkpoint_path": "results/rtd_v5_regression/checkpoints/step_0750.pt",
+        "final_hack_rate": 0.0,
+        "final_hidden_reward": 0.9359375,
+        "rollout_tokens_used": 490511,
+        "tokens_to_target": 127135,
+        "updates_to_target": 126
+      },
+      "rtd_closure_rollback": {
+        "checkpoint_path": "results/rtd_v5_regression/checkpoints/step_0500.pt",
+        "final_hack_rate": 0.0,
+        "final_hidden_reward": 0.9140625,
+        "rollout_tokens_used": 460822,
+        "tokens_to_target": 768,
+        "updates_to_target": 0
+      }
+    }
+  },
+  "seed1": {
+    "diagnosis": {
+      "aggregate_only": {
+        "drop_detector_fired_at": 503,
+        "final50_avg_hidden_reward": 0.0,
+        "final50_avg_train_reward": 0.66546875,
+        "method": "aggregate_training_reward",
+        "note": "detector sees a dip but cannot attribute it; hacked reward partially recovers while true accuracy stays collapsed"
+      },
+      "checkpoint_bisection": {
+        "extra_rollout_tokens": 15376,
+        "first_contaminated_checkpoint": 525,
+        "granularity_updates": 25,
+        "last_clean_checkpoint": 500,
+        "method": "checkpoint_bisection",
+        "num_probes": 7,
+        "wall_seconds": 0.24396419525146484
+      },
+      "rtd_lineage_closure": {
+        "contaminated_checkpoints": [
+          525,
+          550,
+          575,
+          600,
+          625,
+          650,
+          675,
+          700,
+          725,
+          750,
+          775,
+          800,
+          825,
+          850,
+          875,
+          900,
+          925,
+          950,
+          975,
+          1000
+        ],
+        "extra_rollout_tokens": 0,
+        "method": "rtd_lineage_closure",
+        "onset_update": 500,
+        "rescore_seconds": 3.087367057800293,
+        "rollback_checkpoint_step": 500,
+        "total_misscored": 23250,
+        "total_records": 128000
+      },
+      "verifier_attribution": {
+        "phase_a_rewarded": 42354,
+        "rejected_by_v2": 42354,
+        "rejected_by_v2_rate": 1.0
+      }
+    },
+    "recovery": {
+      "full_restart": {
+        "checkpoint_path": "results/rtd_v5_seed1/checkpoints/warmstart.pt",
+        "final_hack_rate": 0.0,
+        "final_hidden_reward": 0.86484375,
+        "rollout_tokens_used": 460913,
+        "tokens_to_target": 229049,
+        "updates_to_target": 297
+      },
+      "last_checkpoint_recovery": {
+        "checkpoint_path": "results/rtd_v5_seed1/checkpoints/step_1000.pt",
+        "final_hack_rate": 0.0625,
+        "final_hidden_reward": 0.0,
+        "rollout_tokens_used": 697000,
+        "tokens_to_target": -1,
+        "updates_to_target": -1
+      },
+      "manual_checkpoint_recovery": {
+        "checkpoint_path": "results/rtd_v5_seed1/checkpoints/step_0750.pt",
+        "final_hack_rate": 0.0390625,
+        "final_hidden_reward": 0.0,
+        "rollout_tokens_used": 702102,
+        "tokens_to_target": -1,
+        "updates_to_target": -1
+      },
+      "rtd_closure_rollback": {
+        "checkpoint_path": "results/rtd_v5_seed1/checkpoints/step_0500.pt",
+        "final_hack_rate": 0.0,
+        "final_hidden_reward": 0.93671875,
+        "rollout_tokens_used": 460832,
+        "tokens_to_target": 22291,
+        "updates_to_target": 28
+      }
+    }
+  },
+  "seed2": {
+    "diagnosis": {
+      "aggregate_only": {
+        "drop_detector_fired_at": 504,
+        "final50_avg_hidden_reward": 0.0,
+        "final50_avg_train_reward": 0.65640625,
+        "method": "aggregate_training_reward",
+        "note": "detector sees a dip but cannot attribute it; hacked reward partially recovers while true accuracy stays collapsed"
+      },
+      "checkpoint_bisection": {
+        "extra_rollout_tokens": 14185,
+        "first_contaminated_checkpoint": 525,
+        "granularity_updates": 25,
+        "last_clean_checkpoint": 500,
+        "method": "checkpoint_bisection",
+        "num_probes": 7,
+        "wall_seconds": 0.14736342430114746
+      },
+      "rtd_lineage_closure": {
+        "contaminated_checkpoints": [
+          525,
+          550,
+          575,
+          600,
+          625,
+          650,
+          675,
+          700,
+          725,
+          750,
+          775,
+          800,
+          825,
+          850,
+          875,
+          900,
+          925,
+          950,
+          975,
+          1000
+        ],
+        "extra_rollout_tokens": 0,
+        "method": "rtd_lineage_closure",
+        "onset_update": 500,
+        "rescore_seconds": 3.0065739154815674,
+        "rollback_checkpoint_step": 500,
+        "total_misscored": 20424,
+        "total_records": 128000
+      },
+      "verifier_attribution": {
+        "phase_a_rewarded": 43439,
+        "rejected_by_v2": 43439,
+        "rejected_by_v2_rate": 1.0
+      }
+    },
+    "recovery": {
+      "full_restart": {
+        "checkpoint_path": "results/rtd_v5_seed2/checkpoints/warmstart.pt",
+        "final_hack_rate": 0.0,
+        "final_hidden_reward": 0.884375,
+        "rollout_tokens_used": 460882,
+        "tokens_to_target": 179745,
+        "updates_to_target": 233
+      },
+      "last_checkpoint_recovery": {
+        "checkpoint_path": "results/rtd_v5_seed2/checkpoints/step_1000.pt",
+        "final_hack_rate": 0.1171875,
+        "final_hidden_reward": 0.0,
+        "rollout_tokens_used": 678480,
+        "tokens_to_target": -1,
+        "updates_to_target": -1
+      },
+      "manual_checkpoint_recovery": {
+        "checkpoint_path": "results/rtd_v5_seed2/checkpoints/step_0750.pt",
+        "final_hack_rate": 0.0859375,
+        "final_hidden_reward": 0.0,
+        "rollout_tokens_used": 680441,
+        "tokens_to_target": -1,
+        "updates_to_target": -1
+      },
+      "rtd_closure_rollback": {
+        "checkpoint_path": "results/rtd_v5_seed2/checkpoints/step_0500.pt",
+        "final_hack_rate": 0.0,
+        "final_hidden_reward": 0.915625,
+        "rollout_tokens_used": 460835,
+        "tokens_to_target": 768,
+        "updates_to_target": 0
+      }
+    }
+  }
+}
