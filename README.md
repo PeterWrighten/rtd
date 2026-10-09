@@ -2,7 +2,7 @@
 
 # Replayable Trajectory Dataflow: Auditing Reward Measurement under Optimization and Drift in RLVR
 
-[![Venue](https://img.shields.io/badge/Venue-AIMS%20%40%20COLM%202026-54B435)](https://aimslab.stanford.edu/workshop)
+[![Venue](https://img.shields.io/badge/Venue-AIMS%20%40%20COLM%202026-54B435)](https://colm.cc/virtual/2026/3454)
 [![Issues](https://img.shields.io/badge/Issues-Welcome!-fbbf24)](../../issues)
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue)](./LICENSE)
 [![python](https://img.shields.io/badge/python-3.9+-3776AB)](https://www.python.org/)
@@ -20,7 +20,7 @@
   </tr>
 </table>
 
-This is the official code repository for the AIMS @ COLM 2026 workshop paper [**Replayable Trajectory Dataflow: Auditing Reward Measurement under Optimization and Drift in RLVR**](./paper/RTD-AIMS-COLM2026.pdf).
+This is the official code repository for the AIMS @ COLM 2026 workshop paper [**Replayable Trajectory Dataflow: Auditing Reward Measurement under Optimization and Drift in RLVR**](https://colm.cc/virtual/2026/3454) ([PDF](./paper/RTD-AIMS-COLM2026.pdf), [OpenReview](https://openreview.net/forum?id=cEHOj1nXGZ)), presented at the [AI Measurement Science Workshop](https://aimslab.stanford.edu/workshop).
 
 In reinforcement learning with verifiable rewards (RLVR), the verifier is a measurement instrument inside the training loop. Policies can exploit a flawed verifier, and verifier changes can silently alter the objective. When that happens, which historical measurements shaped which update, and where is it safe to restart?
 Checkpoints and aggregate metrics cannot say. **Replayable Trajectory Dataflow (RTD)** retains the trajectory evidence that re-sampling cannot reconstruct and links versioned rewards to the updates and checkpoints they influenced. Given a corrected reference, three offline queries, **rescore**, **diff**, and **localize**, identify the historical disagreements and a rollback boundary with **no new rollouts**.
@@ -28,7 +28,7 @@ Checkpoints and aggregate metrics cannot say. **Replayable Trajectory Dataflow (
 ## News
 
 - 📢 [Oct 2026] We released the code, the VeRL/MATH incident evidence, and the [camera-ready paper](./paper/RTD-AIMS-COLM2026.pdf)! 🚀
-- 🎉 [2026] Our paper has been accepted by the **AI Measurement Science (AIMS) Workshop at COLM 2026**! ✨
+- 🎉 [2026] Our paper has been accepted by the **AI Measurement Science (AIMS) Workshop at COLM 2026**! ✨ See the [COLM page](https://colm.cc/virtual/2026/3454).
 
 ## Table of Contents
 
@@ -241,6 +241,7 @@ If you found our code or paper helpful, please cite our work~
   title={Replayable Trajectory Dataflow: Auditing Reward Measurement under Optimization and Drift in RLVR},
   author={Zhang, Zepeng},
   booktitle={AI Measurement Science Workshop at COLM},
-  year={2026}
+  year={2026},
+  url={https://colm.cc/virtual/2026/3454}
 }
 ```

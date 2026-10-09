@@ -16,7 +16,7 @@ dependencies = []
 Homepage = "https://github.com/PeterWrighten/rtd"
 Repository = "https://github.com/PeterWrighten/rtd"
 Issues = "https://github.com/PeterWrighten/rtd/issues"
-Paper = "https://github.com/PeterWrighten/rtd/blob/main/paper/RTD-AIMS-COLM2026.pdf"
+Paper = "https://colm.cc/virtual/2026/3454"
 
 [project.optional-dependencies]
 test = ["pytest"]
