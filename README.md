@@ -120,13 +120,17 @@ print(plan.to_dict())
 
 RTD records a run as a lineage graph over trajectories, updates, and checkpoints:
 
-$$\text{checkpoint} \rightarrow \text{trajectory} \rightarrow \text{update} \rightarrow \text{checkpoint}$$
+```math
+\text{checkpoint} \rightarrow \text{trajectory} \rightarrow \text{update} \rightarrow \text{checkpoint}
+```
 
 Run state is **partitioned by recomputability**. Evidence that the intended query cannot reconstruct (outputs, recorded rewards, measurement versions, sampling configuration, relevant engine signals) is retained once, immutably. Derived quantities are recomputed only when their inputs and execution dependencies are available. Ordinary re-sampling is not a guarantee of exact historical reconstruction.
 
 Each stored trajectory $t$ has a recorded measurement $r(t)$; a pinned corrected reference gives $r^\star(t)$. For a discrepancy $d$ and tolerance $\tau$:
 
-$$M_\tau = \lbrace\, t : d(r(t), r^\star(t)) > \tau \,\rbrace \qquad K_\tau = \mathrm{Reach}_G(M_\tau) \cap (U \cup C)$$
+```math
+M_\tau = \{\, t : d(r(t), r^\star(t)) > \tau \,\} \qquad K_\tau = \mathrm{Reach}_G(M_\tau) \cap (U \cup C)
+```
 
 $M_\tau$ is the mismatch set (`diff`), and $K_\tau$ is the closure of updates and checkpoints reachable from it (`localize`). The first affected update is the earliest update in $K_\tau$; the rollback boundary is its latest **saved** ancestor checkpoint outside $K_\tau$ (`plan_recovery`). Recovery then resumes with fresh rollouts under the corrected reference: stale trajectories are evidence, not training data.
 
